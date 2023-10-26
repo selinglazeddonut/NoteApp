@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.mylovelynoteapp.view.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+
+        <action
+            android:id="@+id/action_listFragment_to_createNewNoteFragment"
+            app:destination="@id/createNewNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewNoteFragment"
+        android:name="com.example.mylovelynoteapp.view.CreateNewNoteFragment"
+        android:label="fragment_create_new_note"
+        tools:layout="@layout/fragment_create_new_note" >
+        <action
+            android:id="@+id/action_createNewNoteFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.mylovelynoteapp.view.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.mylovelynoteapp.view.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>
