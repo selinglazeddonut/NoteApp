@@ -5,9 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.mylovelynoteapp.databinding.FragmentDetailBinding
-import com.example.mylovelynoteapp.view.MyAdapter
+import com.example.mylovelynoteapp.adapter.MyAdapter
 
 
 class DetailFragment : Fragment() {

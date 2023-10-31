@@ -1,4 +1,4 @@
-package com.example.mylovelynoteapp.view.data
+package com.example.mylovelynoteapp.data
 
 
 data class Notes(val title: String, val description: String)

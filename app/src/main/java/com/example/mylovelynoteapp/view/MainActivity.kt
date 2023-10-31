@@ -2,12 +2,9 @@ package com.example.mylovelynoteapp.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI.navigateUp
-import com.example.mylovelynoteapp.view.data.Notes
 import com.example.mylovelynoteapp.R
+import com.example.mylovelynoteapp.adapter.MyAdapter
 import com.example.mylovelynoteapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,21 +21,20 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
         if (navHostFragment is NavHostFragment) {
             val navController = navHostFragment.navController
-            // Diğer işlemler...
+
+
         }
 
-        binding.navHostFragment
 
 
-
-
-
-
-    }
-
+      /**  override fun onSupportNavigateUp(): Boolean {
+            navHostFragment.navController.navigateUp()
+            return super.onSupportNavigateUp() **/
+        }
 
 
 

@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mylovelynoteapp.view.data.Notes
+import com.example.mylovelynoteapp.adapter.MyAdapter
+import com.example.mylovelynoteapp.data.Notes
 import com.example.mylovelynoteapp.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
@@ -32,9 +32,9 @@ class ListFragment : Fragment() {
 
         // Other code for onViewCreated if necessary
 
-       val action = ListFragmentDirections.actionListFragmentToDetailFragment()
+      // val action = ListFragmentDirections.actionListFragmentToDetailFragment()
 
-        findNavController().navigate(action)
+      //  findNavController().navigate(action)
 
 
 
