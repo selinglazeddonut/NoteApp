@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+       //navigation için main.xml'de tanımlanan (nav_host id'si olan) fragment container view'i bağladık.
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
         if (navHostFragment is NavHostFragment) {
             val navController = navHostFragment.navController

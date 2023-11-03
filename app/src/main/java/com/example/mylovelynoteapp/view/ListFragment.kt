@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mylovelynoteapp.adapter.MyAdapter
@@ -31,20 +30,19 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Other code for onViewCreated if necessary
 
+        // butona tıklama özelliği eklendi.
         binding.createNoteButton.setOnClickListener {
-          val create = binding.createNoteButton
-            val action= ListFragmentDirections.actionListFragmentToCreateNewNoteFragment()
-            findNavController().navigate(action)
+            val create = binding.createNoteButton
+            val action = ListFragmentDirections.actionListFragmentToCreateNewNoteFragment()
+            findNavController().navigate(action)  //bu kod ile yeni bir fragmenta geçiş sağladık safe-args.
 
         }
 
+        addFragmentData()
 
 
-
-
-
+        //ilk açılan ekrana recyclerview ve adapter tanımlaması yaptık.
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = adapter
 
@@ -52,6 +50,7 @@ class ListFragment : Fragment() {
         addFragmentData()
 
     }
+
     private fun addFragmentData() {
         val notes = arrayListOf(
             Notes("note 1", "description 1"),
