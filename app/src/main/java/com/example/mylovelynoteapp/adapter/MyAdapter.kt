@@ -4,13 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mylovelynoteapp.R
 import com.example.mylovelynoteapp.data.Notes
-import com.example.mylovelynoteapp.databinding.FragmentListBinding
 import com.example.mylovelynoteapp.view.ListFragmentDirections
 import com.example.mylovelynoteapp.view.ListFragmentDirections.Companion.actionListFragmentToDetailFragment
 
@@ -20,6 +17,7 @@ class MyAdapter(val notesList: ArrayList<Notes>) : RecyclerView.Adapter<MyAdapte
         val title: TextView = itemView.findViewById(R.id.titleTextView)
     }
     fun addNotes(Notes: List<Notes>) {
+        notesList.clear() //bug
         notesList.addAll(Notes)
         notifyDataSetChanged()
     }
